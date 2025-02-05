@@ -19,10 +19,11 @@ function userInput(){
 
         userChoice = prompt("Choose one: 1-Rock, 2-Paper or 3-Scissors");
 
-        log("Enter either 1,2 or 3");
-
         if(userChoice == 1 || userChoice == 2 || userChoice == 3){
             choice = true;
+        }
+        else{
+            log("Enter either 1,2 or 3");
         }
     }
 
