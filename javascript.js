@@ -3,6 +3,13 @@ const log = console.log;
 log("Hello, World;");
 
 // ask user for input (rock, paper, scissors)
+
+let userChoice;
+userChoice=prompt("Choose one: 1-Rock, 2-Paper or 3-Scissors");
+
+log(userChoice);
+log(typeof userChoice);
+
 // generate random computer choice
 // compare the two
 // decide a winner
