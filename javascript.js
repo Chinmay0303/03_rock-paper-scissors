@@ -28,12 +28,13 @@ function userInput(){
     }
 
     log({userChoice});
+    return userChoice;
     // log(typeof userChoice);
 }
 
 userInput();
-log('2nd');
-userInput();
+// log('2nd');
+// userInput();
 
 // generate random computer choice
 // compare the two
