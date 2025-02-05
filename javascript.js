@@ -10,21 +10,29 @@ let userChoice;
 
 // create a while loop for ascertaining this
 
-let choice = false;
+// create a function for taking user input multiple times
 
-while(choice === false){
-    
-    userChoice = prompt("Choose one: 1-Rock, 2-Paper or 3-Scissors");
+function userInput(){
+    let choice = false;
 
-    log("Enter either 1,2 or 3");
+    while(choice === false){
 
-    if(userChoice == 1 || userChoice == 2 || userChoice == 3){
-        choice = true;
+        userChoice = prompt("Choose one: 1-Rock, 2-Paper or 3-Scissors");
+
+        log("Enter either 1,2 or 3");
+
+        if(userChoice == 1 || userChoice == 2 || userChoice == 3){
+            choice = true;
+        }
     }
+
+    log({userChoice});
+    // log(typeof userChoice);
 }
 
-log({userChoice});
-// log(typeof userChoice);
+userInput();
+log('2nd');
+userInput();
 
 // generate random computer choice
 // compare the two
