@@ -79,43 +79,21 @@ function choose(choice){
 // if user wins -> user score increases by one
 
 function winner(){
-    if(+userChoice === 1){
-        if(+computerChoice === 2){
-            computerScore++;
-            return 'Computer Wins';
-        }
-        else if(+computerChoice === 1){
-            return 'Draw';
-        }
-        else
-            userScore++;
-            return 'User Wins';
-    }
-    else if(+userChoice === 2){
-        if(+computerChoice === 3){
-            computerScore++;
-            return 'Computer Wins';
-        }
-        else if(+computerChoice === 2){
-            return 'Draw';
-        }
-        else
-            userScore++;
-            return 'User Wins';
-    }
-    else{
-        if(+computerChoice === 1){
-            computerScore++;
-            return 'Computer Wins';
-        }
-        else if(+computerChoice === 3){
-            return 'Draw';
-        }
-        else
-            userScore++;
-            return 'User Wins';
+    if (+userChoice === computerChoice) {
+        return 'Draw';
+    } else if (
+        (+userChoice === 1 && computerChoice === 3) ||
+        (+userChoice === 2 && computerChoice === 1) ||
+        (+userChoice === 3 && computerChoice === 2)
+    ) {
+        userScore++;
+        return 'User Wins';
+    } else {
+        computerScore++;
+        return 'Computer Wins';
     }
 }
+
 
 log(winner());
 log({userScore});
