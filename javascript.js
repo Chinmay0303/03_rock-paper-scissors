@@ -138,3 +138,13 @@ while(keepgoing){
 }
 // after 5 rounds compare both the score
 // declare the ultimate winner
+
+if (+userScore > +computerScore) {
+    log("The User is the Ultimate Winner");
+}
+else if (+userScore < +computerScore) {
+    log("The Computer is the Ultimate Winner");
+}
+else{
+    log("The spoils are shared");
+}
