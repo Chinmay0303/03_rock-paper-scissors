@@ -12,6 +12,8 @@ const choice_1 = 'Rock';
 const choice_2 = 'Paper';
 const choice_3 = 'Scissors';
 
+function playGame(){
+
 // ask user for input (rock, paper, scissors)
 
 let userChoice;
@@ -118,6 +120,7 @@ function winner(){
 log(winner());
 log(userScore,computerScore);
 
+}
 
 // repeat this 5 times
 // after 5 rounds compare both the score
