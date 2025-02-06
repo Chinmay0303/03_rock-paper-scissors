@@ -8,9 +8,9 @@ let computerScore = 0;
 
 // make choices to map to 1,2 and 3
 
-let choice_1 = 'Rock';
-let choice_2 = 'Paper';
-let choice_3 = 'Scissors';
+const choice_1 = 'Rock';
+const choice_2 = 'Paper';
+const choice_3 = 'Scissors';
 
 // ask user for input (rock, paper, scissors)
 
