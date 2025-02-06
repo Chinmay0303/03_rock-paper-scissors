@@ -12,7 +12,7 @@ let userChoice;
 
 // create a function for taking user input multiple times
 
-function userInput(){
+function userPlays(){
     let choice = false;
 
     while(choice === false){
@@ -32,9 +32,9 @@ function userInput(){
     // log(typeof userChoice);
 }
 
-userInput();
+userPlays();
 // log('2nd');
-// userInput();
+// userPlays();
 
 // generate random computer choice
 
