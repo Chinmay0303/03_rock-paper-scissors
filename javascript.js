@@ -75,6 +75,50 @@ function choose(choice){
 // decide a winner
 // if computer wins -> computer score increases by one
 // if user wins -> user score increases by one
+
+function winner(){
+    if(+userChoice === 1){
+        if(+computerChoice === 2){
+            computerScore++;
+            return 'Computer Wins';
+        }
+        else if(+computerChoice === 1){
+            return 'Draw';
+        }
+        else
+            userScore++;
+            return 'User Wins';
+    }
+    else if(+userChoice === 2){
+        if(+computerChoice === 3){
+            computerScore++;
+            return 'Computer Wins';
+        }
+        else if(+computerChoice === 2){
+            return 'Draw';
+        }
+        else
+            userScore++;
+            return 'User Wins';
+    }
+    else{
+        if(+computerChoice === 1){
+            computerScore++;
+            return 'Computer Wins';
+        }
+        else if(+computerChoice === 3){
+            return 'Draw';
+        }
+        else
+            userScore++;
+            return 'User Wins';
+    }
+}
+
+log(winner());
+log(userScore,computerScore);
+
+
 // repeat this 5 times
 // after 5 rounds compare both the score
 // declare the ultimate winner
