@@ -34,6 +34,7 @@ function userPlays(){
     }
 
     log({userChoice});
+    log(`User played ${choose(userChoice)}`);
     return userChoice;
     // log(typeof userChoice);
 }
@@ -49,10 +50,22 @@ let computerChoice;
 function computerPlays(){
     computerChoice = 1 + Math.floor(Math.random()*3);
     log({computerChoice});
+    log(`Computer played ${choose(computerChoice)}`);
     return computerChoice;
 }
 
 computerPlays();
+
+function choose(choice){
+    if (+choice === 1){
+        return choice_1;
+    }
+    else if (+choice === 2){
+        return choice_2;
+    }
+    else
+        return choice_3;
+}
 
 // compare the two
 // decide a winner
