@@ -124,5 +124,17 @@ log({computerScore});
 }
 
 // repeat this 5 times
+
+let game = 1;
+let keepgoing = true;
+
+while(keepgoing){
+    log(`Game ${game}: `);
+    playGame();
+
+    if(game++ == 5){
+        keepgoing = false;
+    }
+}
 // after 5 rounds compare both the score
 // declare the ultimate winner
