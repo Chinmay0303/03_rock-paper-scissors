@@ -118,7 +118,8 @@ function winner(){
 }
 
 log(winner());
-log(userScore,computerScore);
+log({userScore});
+log({computerScore});
 
 }
 
