@@ -37,6 +37,17 @@ userInput();
 // userInput();
 
 // generate random computer choice
+
+let computerChoice;
+
+function computerPlays(){
+    computerChoice = 1 + Math.floor(Math.random()*3);
+    log({computerChoice});
+    return computerChoice;
+}
+
+computerPlays();
+
 // compare the two
 // decide a winner
 // if computer wins -> computer score increases by one
