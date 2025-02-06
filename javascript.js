@@ -2,6 +2,10 @@ const log = console.log;
 
 log("Hello, World;");
 
+// store scores of user and computer
+let userScore = 0;
+let computerScore = 0;
+
 // make choices to map to 1,2 and 3
 
 let choice_1 = 'Rock';
