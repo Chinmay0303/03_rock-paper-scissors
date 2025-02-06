@@ -29,9 +29,9 @@ function userPlays(){
 
     while(choice === false){
 
-        userChoice = prompt("Choose one: 1-Rock, 2-Paper or 3-Scissors");
+        userChoice = +prompt("Choose one: 1-Rock, 2-Paper or 3-Scissors");
 
-        if(userChoice == 1 || userChoice == 2 || userChoice == 3){
+        if(userChoice === 1 || userChoice === 2 || userChoice === 3){
             choice = true;
         }
         else{
@@ -63,10 +63,10 @@ function computerPlays(){
 computerPlays();
 
 function choose(choice){
-    if (+choice === 1){
+    if (choice === 1){
         return choice_1;
     }
-    else if (+choice === 2){
+    else if (choice === 2){
         return choice_2;
     }
     else
@@ -79,12 +79,12 @@ function choose(choice){
 // if user wins -> user score increases by one
 
 function winner(){
-    if (+userChoice === computerChoice) {
+    if (userChoice === computerChoice) {
         return 'Draw';
     } else if (
-        (+userChoice === 1 && computerChoice === 3) ||
-        (+userChoice === 2 && computerChoice === 1) ||
-        (+userChoice === 3 && computerChoice === 2)
+        (userChoice === 1 && computerChoice === 3) ||
+        (userChoice === 2 && computerChoice === 1) ||
+        (userChoice === 3 && computerChoice === 2)
     ) {
         userScore++;
         return 'User Wins';
@@ -117,10 +117,10 @@ while(keepgoing){
 // after 5 rounds compare both the score
 // declare the ultimate winner
 
-if (+userScore > +computerScore) {
+if (userScore > computerScore) {
     log("The User is the Ultimate Winner");
 }
-else if (+userScore < +computerScore) {
+else if (userScore < computerScore) {
     log("The Computer is the Ultimate Winner");
 }
 else{
