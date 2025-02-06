@@ -2,6 +2,12 @@ const log = console.log;
 
 log("Hello, World;");
 
+// make choices to map to 1,2 and 3
+
+let choice_1 = 'Rock';
+let choice_2 = 'Paper';
+let choice_3 = 'Scissors';
+
 // ask user for input (rock, paper, scissors)
 
 let userChoice;
