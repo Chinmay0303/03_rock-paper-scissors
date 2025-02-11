@@ -46,7 +46,7 @@ imgButtonPaper.classList.add('img-button');
 
 const imgButtonScissors = document.createElement('input');
 imgButtonScissors.type = 'image';
-imgButtonScissors.src = './imgs/scissor.png';
+imgButtonScissors.src = './imgs/scissors.png';
 imgButtonScissors.classList.add('img-button');
 
 imgContainer.appendChild(imgButtonRock);
@@ -56,6 +56,7 @@ imgContainer.appendChild(imgButtonScissors);
 function resetButtonClicked(){
     log('RESET');
     playArea.removeChild(optionsDiv);
+    playArea.removeChild(imgContainer);
 
     resetButton.disabled = true;
     playButton.disabled = false;
@@ -64,6 +65,7 @@ function resetButtonClicked(){
 function playButtonClicked(){
     log('PLAY');
     playArea.appendChild(optionsDiv);
+    playArea.append(imgContainer);
 
     playButton.disabled = true;
     resetButton.disabled = false;
