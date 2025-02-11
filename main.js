@@ -35,12 +35,23 @@ optionsDiv.textContent = 'Choose One: ';
 
 // creating buttons to choose from
 const imgButtonRock = document.createElement('input');
-imgButtonRock.type = 'image'
-const imgButtonPaper = document.createElement('input');
-imgButtonRock.type = 'image'
-const imgButtonScissors = document.createElement('input');
-imgButtonRock.type = 'image'
+imgButtonRock.type = 'image';
+imgButtonRock.src = './imgs/rock.png';
+imgButtonRock.classList.add('img-button');
 
+const imgButtonPaper = document.createElement('input');
+imgButtonPaper.type = 'image';
+imgButtonPaper.src = './imgs/paper.png';
+imgButtonPaper.classList.add('img-button');
+
+const imgButtonScissors = document.createElement('input');
+imgButtonScissors.type = 'image';
+imgButtonScissors.src = './imgs/scissor.png';
+imgButtonScissors.classList.add('img-button');
+
+imgContainer.appendChild(imgButtonRock);
+imgContainer.appendChild(imgButtonPaper);
+imgContainer.appendChild(imgButtonScissors);
 
 function resetButtonClicked(){
     log('RESET');
