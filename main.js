@@ -5,6 +5,8 @@ log('main');
 const playButton = document.querySelector('.play.button');
 const resetButton = document.querySelector('.reset.button');
 
+resetButton.disabled = true;
+
 // making use of event bubbling
 // adding eventListener on the whole document rather than on individual buttons
 document.addEventListener('click', clickFunction);
