@@ -3,3 +3,29 @@
     margin: 0px;
     box-sizing: border-box;
 }
+
+.head-container{
+    border: 2px solid green;
+}
+
+.heading{
+    border: 2px solid red;
+}
+
+.main-container{
+    border: 2px solid blue;
+}
+
+.main-content{
+    border: 2px solid gold;
+}
+.play-area{
+    border: 2px solid orchid;
+}
+
+.score-board{
+    border: 2px solid palevioletred;
+}
+.control-section{
+    border: 2px solid seagreen;
+}
