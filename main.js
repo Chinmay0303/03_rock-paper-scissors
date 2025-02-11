@@ -21,14 +21,24 @@ function clickFunction(event){
     }
 }
 
+// Creating play-area
+const playArea = document.querySelector('.play-area');
+const optionsDiv = document.createElement('div');
+
+optionsDiv.textContent = 'Choose One: ';
+
 function resetButtonClicked(){
     log('RESET');
+    playArea.removeChild(optionsDiv);
+
     resetButton.disabled = true;
     playButton.disabled = false;
 }
 
 function playButtonClicked(){
     log('PLAY');
+    playArea.appendChild(optionsDiv);
+
     playButton.disabled = true;
     resetButton.disabled = false;
 }
