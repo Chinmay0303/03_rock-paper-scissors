@@ -23,11 +23,24 @@ function clickFunction(event){
     }
 }
 
-// Creating play-area
+// Creating divs inside play-area
 const playArea = document.querySelector('.play-area');
 const optionsDiv = document.createElement('div');
+const imgContainer = document.createElement('div');
+
+optionsDiv.classList.add('options-div');
+imgContainer.classList.add('img-container');
 
 optionsDiv.textContent = 'Choose One: ';
+
+// creating buttons to choose from
+const imgButtonRock = document.createElement('input');
+imgButtonRock.type = 'image'
+const imgButtonPaper = document.createElement('input');
+imgButtonRock.type = 'image'
+const imgButtonScissors = document.createElement('input');
+imgButtonRock.type = 'image'
+
 
 function resetButtonClicked(){
     log('RESET');
