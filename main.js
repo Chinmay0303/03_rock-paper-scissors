@@ -43,7 +43,7 @@ function playButtonClicked(){
     resetButton.disabled = false;
 }
 
-// Creating divs inside play-area
+// Creating divs inside .main-content
 const playArea = document.createElement('div');
 playArea.classList.add('play-area');
 
@@ -77,6 +77,43 @@ playArea.classList.add('play-area');
         imgContainer.appendChild(imgButtonRock);
         imgContainer.appendChild(imgButtonPaper);
         imgContainer.appendChild(imgButtonScissors);
+
+    // creating .play-result-area inside .play-area
+
+    const playResultArea = document.createElement('div');
+    playResultArea.classList.add('play-result-area');
+
+    // playArea.appendChild(playResultArea); when user clicks an image button
+
+        const userPlayedArea = document.createElement('div');
+        userPlayedArea.classList.add('user-played-area');
+        playResultArea.appendChild(userPlayedArea);
+
+            const userPlayedText = document.createElement('div');
+            userPlayedText.classList.add('user-played-text');
+            userPlayedText.textContent = 'User Played: ';
+            userPlayedArea.appendChild(userPlayedText);
+            
+            const userPlayedImage = document.createElement('div');
+            userPlayedImage.classList.add('user-played-image');
+            userPlayedArea.appendChild(userPlayedImage);
+            
+
+        const compPlayedArea = document.createElement('div');
+        compPlayedArea.classList.add('comp-played-area');
+        playResultArea.appendChild(compPlayedArea);
+            
+            const compPlayedText = document.createElement('div');
+            compPlayedText.classList.add('comp-played-text');
+            compPlayedText.textContent = 'Computer Played: ';
+            compPlayedArea.appendChild(compPlayedText);
+            
+            const compPlayedImage = document.createElement('div');
+            compPlayedImage.classList.add('comp-played-image');
+            compPlayedArea.appendChild(compPlayedImage);
+            
+
+
 
 // creating divs inside score-board
 
