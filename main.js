@@ -5,6 +5,8 @@ log('main');
 const playButton = document.querySelector('.play.button');
 const resetButton = document.querySelector('.reset.button');
 
+const mainContent = document.querySelector('.main-content');
+
 resetButton.disabled = true;
 
 // making use of event bubbling
@@ -25,8 +27,8 @@ function clickFunction(event){
 
 function resetButtonClicked(){
     log('RESET');
-    playArea.removeChild(optionsDiv);
-    playArea.removeChild(imgContainer);
+    mainContent.removeChild(playArea);
+    mainContent.removeChild(scoreBoard);
 
     resetButton.disabled = true;
     playButton.disabled = false;
@@ -34,46 +36,52 @@ function resetButtonClicked(){
 
 function playButtonClicked(){
     log('PLAY');
-    playArea.appendChild(optionsDiv);
-    playArea.append(imgContainer);
+    mainContent.appendChild(playArea);
+    mainContent.appendChild(scoreBoard);
 
     playButton.disabled = true;
     resetButton.disabled = false;
 }
 
 // Creating divs inside play-area
-const playArea = document.querySelector('.play-area');
-const optionsDiv = document.createElement('div');
-const imgContainer = document.createElement('div');
+const playArea = document.createElement('div');
+playArea.classList.add('play-area');
 
-optionsDiv.classList.add('options-div');
-imgContainer.classList.add('img-container');
+    const optionsDiv = document.createElement('div');
+    const imgContainer = document.createElement('div');
 
-optionsDiv.textContent = 'Choose One: ';
+    playArea.appendChild(optionsDiv);
+    playArea.appendChild(imgContainer);
 
-// creating buttons to choose from
-const imgButtonRock = document.createElement('input');
-imgButtonRock.type = 'image';
-imgButtonRock.src = './imgs/rock.png';
-imgButtonRock.classList.add('img-button');
+    optionsDiv.classList.add('options-div');
+    imgContainer.classList.add('img-container');
 
-const imgButtonPaper = document.createElement('input');
-imgButtonPaper.type = 'image';
-imgButtonPaper.src = './imgs/paper.png';
-imgButtonPaper.classList.add('img-button');
+        optionsDiv.textContent = 'Choose One: ';
 
-const imgButtonScissors = document.createElement('input');
-imgButtonScissors.type = 'image';
-imgButtonScissors.src = './imgs/scissors.png';
-imgButtonScissors.classList.add('img-button');
+        // creating buttons to choose from
+        const imgButtonRock = document.createElement('input');
+        imgButtonRock.type = 'image';
+        imgButtonRock.src = './imgs/rock.png';
+        imgButtonRock.classList.add('img-button');
 
-imgContainer.appendChild(imgButtonRock);
-imgContainer.appendChild(imgButtonPaper);
-imgContainer.appendChild(imgButtonScissors);
+        const imgButtonPaper = document.createElement('input');
+        imgButtonPaper.type = 'image';
+        imgButtonPaper.src = './imgs/paper.png';
+        imgButtonPaper.classList.add('img-button');
+
+        const imgButtonScissors = document.createElement('input');
+        imgButtonScissors.type = 'image';
+        imgButtonScissors.src = './imgs/scissors.png';
+        imgButtonScissors.classList.add('img-button');
+
+        imgContainer.appendChild(imgButtonRock);
+        imgContainer.appendChild(imgButtonPaper);
+        imgContainer.appendChild(imgButtonScissors);
 
 // creating divs inside score-board
 
-const scoreBoard = document.querySelector('.score-board');
+const scoreBoard = document.createElement('div');
+scoreBoard.classList.add('score-board');
 
     const scoreBoardTitle = document.createElement('div');
     scoreBoardTitle.classList.add('score-board-title');
@@ -112,6 +120,3 @@ const scoreBoard = document.querySelector('.score-board');
             compScore.classList.add('score');
             compScore.textContent = 0;
             compScoreDiv.appendChild(compScore);
-
-
-
