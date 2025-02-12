@@ -63,16 +63,19 @@ playArea.classList.add('play-area');
         imgButtonRock.type = 'image';
         imgButtonRock.src = './imgs/rock.png';
         imgButtonRock.classList.add('img-button');
+        imgButtonRock.setAttribute('id','img-button-rock');
 
         const imgButtonPaper = document.createElement('input');
         imgButtonPaper.type = 'image';
         imgButtonPaper.src = './imgs/paper.png';
         imgButtonPaper.classList.add('img-button');
+        imgButtonPaper.setAttribute('id','img-button-paper');
 
         const imgButtonScissors = document.createElement('input');
         imgButtonScissors.type = 'image';
         imgButtonScissors.src = './imgs/scissors.png';
         imgButtonScissors.classList.add('img-button');
+        imgButtonScissors.setAttribute('id','img-button-scissors');
 
         imgContainer.appendChild(imgButtonRock);
         imgContainer.appendChild(imgButtonPaper);
