@@ -23,6 +23,24 @@ function clickFunction(event){
     }
 }
 
+function resetButtonClicked(){
+    log('RESET');
+    playArea.removeChild(optionsDiv);
+    playArea.removeChild(imgContainer);
+
+    resetButton.disabled = true;
+    playButton.disabled = false;
+}
+
+function playButtonClicked(){
+    log('PLAY');
+    playArea.appendChild(optionsDiv);
+    playArea.append(imgContainer);
+
+    playButton.disabled = true;
+    resetButton.disabled = false;
+}
+
 // Creating divs inside play-area
 const playArea = document.querySelector('.play-area');
 const optionsDiv = document.createElement('div');
@@ -53,20 +71,47 @@ imgContainer.appendChild(imgButtonRock);
 imgContainer.appendChild(imgButtonPaper);
 imgContainer.appendChild(imgButtonScissors);
 
-function resetButtonClicked(){
-    log('RESET');
-    playArea.removeChild(optionsDiv);
-    playArea.removeChild(imgContainer);
+// creating divs inside score-board
 
-    resetButton.disabled = true;
-    playButton.disabled = false;
-}
+const scoreBoard = document.querySelector('.score-board');
 
-function playButtonClicked(){
-    log('PLAY');
-    playArea.appendChild(optionsDiv);
-    playArea.append(imgContainer);
+    const scoreBoardTitle = document.createElement('div');
+    scoreBoardTitle.classList.add('score-board-title');
+    scoreBoardTitle.textContent = 'Score Board';
+    scoreBoard.appendChild(scoreBoardTitle);
 
-    playButton.disabled = true;
-    resetButton.disabled = false;
-}
+    const scoreDiv = document.createElement('div');
+    scoreDiv.classList.add('score-div');
+    scoreBoard.appendChild(scoreDiv);
+
+        const userScoreDiv = document.createElement('div');
+        userScoreDiv.classList.add('user-score-div');
+        scoreDiv.appendChild(userScoreDiv);
+
+            const userTitle = document.createElement('div');
+            userTitle.classList.add('title');
+            userTitle.textContent = 'User: ';
+            userScoreDiv.appendChild(userTitle);
+
+            const userScore = document.createElement('div');
+            userScore.classList.add('score');
+            userScore.textContent = 0;
+            userScoreDiv.appendChild(userScore);
+            
+
+        const compScoreDiv = document.createElement('div');
+        compScoreDiv.classList.add('comp-score-div');
+        scoreDiv.appendChild(compScoreDiv);
+
+            const compTitle = document.createElement('div');
+            compTitle.classList.add('title');
+            compTitle.textContent = 'Computer: ';
+            compScoreDiv.appendChild(compTitle);
+
+            const compScore = document.createElement('div');
+            compScore.classList.add('score');
+            compScore.textContent = 0;
+            compScoreDiv.appendChild(compScore);
+
+
+
