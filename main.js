@@ -104,9 +104,15 @@ playArea.classList.add('play-area');
             userPlayedText.textContent = 'User Played: ';
             userPlayedArea.appendChild(userPlayedText);
             
-            const userPlayedImage = document.createElement('div');
-            userPlayedImage.classList.add('user-played-image');
-            userPlayedArea.appendChild(userPlayedImage);
+            const userPlayedImageDiv = document.createElement('div');
+            userPlayedImageDiv.classList.add('user-played-image-div');
+            userPlayedArea.appendChild(userPlayedImageDiv);
+
+                const userImg = document.createElement('img');
+                userImg.classList.add('user-img');
+                userImg.setAttribute('width','60px');
+                userImg.setAttribute('height','60px');
+                userPlayedArea.appendChild(userImg);
             
 
         const compPlayedArea = document.createElement('div');
@@ -118,10 +124,15 @@ playArea.classList.add('play-area');
             compPlayedText.textContent = 'Computer Played: ';
             compPlayedArea.appendChild(compPlayedText);
             
-            const compPlayedImage = document.createElement('div');
-            compPlayedImage.classList.add('comp-played-image');
-            compPlayedArea.appendChild(compPlayedImage);
-            
+            const compPlayedImageDiv = document.createElement('div');
+            compPlayedImageDiv.classList.add('comp-played-image-div');
+            compPlayedArea.appendChild(compPlayedImageDiv);
+
+                const compImg = document.createElement('img');
+                compImg.classList.add('comp-img');
+                compImg.setAttribute('width','60px');
+                compImg.setAttribute('height','60px');
+                compPlayedArea.appendChild(compImg);
 
 
 
