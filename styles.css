@@ -44,6 +44,30 @@
     align-items: center;
 }
 
+.rounds-div{
+    border: 2px solid red;
+}
+
+.img-container{
+    border: 2px solid green;
+}
+
+.play-result-area{
+    border: 2px solid blue;
+}
+
+.user-played-area{
+    border: 2px solid gold;
+}
+
+.comp-played-area{
+    border: 2px solid magenta;
+}
+
+.final-result-div{
+    border: 2px solid brown;
+}
+
 .score-board{
     border: 2px solid palevioletred;
 }
