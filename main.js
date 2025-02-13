@@ -93,7 +93,8 @@ playArea.classList.add('play-area');
     const playResultArea = document.createElement('div');
     playResultArea.classList.add('play-result-area');
 
-    // playArea.appendChild(playResultArea); when user clicks an image button
+    // when user clicks an image button
+    // playArea.appendChild(playResultArea);
 
         const userPlayedArea = document.createElement('div');
         userPlayedArea.classList.add('user-played-area');
@@ -134,6 +135,9 @@ playArea.classList.add('play-area');
                 compImg.setAttribute('height','60px');
                 compPlayedArea.appendChild(compImg);
 
+        const resultDiv = document.createElement('div');
+        resultDiv.classList.add('resut-div');
+        playResultArea.appendChild(resultDiv);
 
 
 // creating divs inside score-board
