@@ -61,6 +61,10 @@ function imgButtonClicked(event){
         userImg.setAttribute('src',imgSource[2]);
     }
 
+    let randomImg = Math.floor(Math.random()*3);
+    log(randomImg);
+    compImg.setAttribute('src',imgSource[randomImg]);
+
     playArea.appendChild(playResultArea);
 }
 
