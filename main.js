@@ -23,6 +23,9 @@ function clickFunction(event){
     else if(buttonClicked === 'play button'){
         playButtonClicked();
     }
+    else if(buttonClicked === 'img-button'){
+        imgButtonClicked(event);
+    }
 }
 
 function resetButtonClicked(){
@@ -41,6 +44,10 @@ function playButtonClicked(){
 
     playButton.disabled = true;
     resetButton.disabled = false;
+}
+
+function imgButtonClicked(event){
+    log(event.target.id);
 }
 
 // Creating divs inside .main-content
