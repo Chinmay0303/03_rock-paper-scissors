@@ -89,14 +89,14 @@ function imgButtonClicked(event){
     if(userChoice === 0 && compChoice === 2
         || userChoice === 1 && compChoice === 0
         || userChoice === 2 && compChoice === 1){
-            resultDiv.textContent = 'User Wins';
+            resultDiv.textContent = `Round ${roundNo} Result: User Wins`;
             uScore++;
         }
     else if(userChoice === compChoice){
-            resultDiv.textContent = 'Tied';
+            resultDiv.textContent = `Round ${roundNo} Result: Tie`;
     }
     else{
-            resultDiv.textContent = 'Computer Wins';
+            resultDiv.textContent = `Round ${roundNo} Result: Computer Wins`;
             cScore++;
     }
 
@@ -125,13 +125,13 @@ function endGame(uScore,cScore){
     resetButton.disabled = true;
 
     if(uScore > cScore){
-        finalResultDiv.textContent = 'Final Winner: User';
+        finalResultDiv.textContent = 'Final Result: User Wins';
     }
     else if(uScore === cScore){
-        finalResultDiv.textContent = 'No Final Winner';
+        finalResultDiv.textContent = 'Final Result: Tie';
     }
     else{
-        finalResultDiv.textContent = 'Final Winner: Computer';
+        finalResultDiv.textContent = 'Final Result: Computer Wins';
     }
 
     playArea.appendChild(finalResultDiv);
