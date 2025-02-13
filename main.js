@@ -5,6 +5,7 @@ log('main');
 const playButton = document.querySelector('.play.button');
 const resetButton = document.querySelector('.reset.button');
 
+const mainContainer = document.querySelector('.main-container');
 const mainContent = document.querySelector('.main-content');
 
 resetButton.disabled = true;
@@ -30,14 +31,9 @@ function clickFunction(event){
 
 function resetButtonClicked(){
     log('RESET');
-    mainContent.removeChild(playArea);
-    mainContent.removeChild(scoreBoard);
-    playArea.removeChild(playResultArea);
 
-    userScore.textContent = 0;
-    compScore.textContent = 0;
-    roundNo = 1;
-    roundsDiv.textContent = `Round ${roundNo}`;
+    mainContainer.removeChild(mainContent);
+    playArea.appendChild(playResultArea);
 
     resetButton.disabled = true;
     playButton.disabled = false;
@@ -47,6 +43,17 @@ function playButtonClicked(){
     log('PLAY');
     mainContent.appendChild(playArea);
     mainContent.appendChild(scoreBoard);
+
+    mainContainer.appendChild(mainContent);
+    playArea.removeChild(playResultArea);
+    playArea.appendChild(roundsDiv);
+    playArea.appendChild(imgContainer);
+
+    userScore.textContent = 0;
+    compScore.textContent = 0;
+    roundNo = 1;
+    roundsDiv.textContent = `Round ${roundNo}`;
+
 
     playButton.disabled = true;
     resetButton.disabled = false;
@@ -112,6 +119,8 @@ function endGame(){
     playArea.removeChild(imgContainer);
     roundNo = 1;
 
+    playButton.disabled = false;
+    resetButton.disabled = true;
 }
 
 // Creating divs inside .main-content
@@ -157,6 +166,7 @@ playArea.classList.add('play-area');
 
     const playResultArea = document.createElement('div');
     playResultArea.classList.add('play-result-area');
+    playArea.appendChild(playResultArea);
 
     // when user clicks an image button
 
