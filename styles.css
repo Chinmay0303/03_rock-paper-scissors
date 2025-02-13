@@ -31,8 +31,11 @@
     border: 2px solid gold;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
+
+    flex-wrap: wrap;
+    align-content: center;
 }
 .play-area{
     border: 2px solid orchid;
@@ -70,6 +73,8 @@
 
 .score-board{
     border: 2px solid palevioletred;
+
+    width: 20%;
 }
 .control-section{
     border: 2px solid seagreen;
