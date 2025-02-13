@@ -34,6 +34,7 @@ function resetButtonClicked(){
 
     mainContainer.removeChild(mainContent);
     playArea.appendChild(playResultArea);
+    playArea.appendChild(finalResultDiv);
 
     resetButton.disabled = true;
     playButton.disabled = false;
@@ -48,6 +49,7 @@ function playButtonClicked(){
     playArea.removeChild(playResultArea);
     playArea.appendChild(roundsDiv);
     playArea.appendChild(imgContainer);
+    playArea.removeChild(finalResultDiv);
 
     userScore.textContent = 0;
     compScore.textContent = 0;
@@ -108,11 +110,11 @@ function imgButtonClicked(event){
      // if rounds reach 5
 
      if(roundNo > 5){
-        endGame();
+        endGame(uScore,cScore);
     }
 }
 
-function endGame(){
+function endGame(uScore,cScore){
     log('Game Ends');
 
     playArea.removeChild(roundsDiv);
@@ -121,6 +123,18 @@ function endGame(){
 
     playButton.disabled = false;
     resetButton.disabled = true;
+
+    if(uScore > cScore){
+        finalResultDiv.textContent = 'Final Winner: User';
+    }
+    else if(uScore === cScore){
+        finalResultDiv.textContent = 'No Final Winner';
+    }
+    else{
+        finalResultDiv.textContent = 'Final Winner: Computer';
+    }
+
+    playArea.appendChild(finalResultDiv);
 }
 
 // Creating divs inside .main-content
@@ -213,6 +227,10 @@ playArea.classList.add('play-area');
         resultDiv.classList.add('resut-div');
         playResultArea.appendChild(resultDiv);
 
+    // final result div
+    const finalResultDiv = document.createElement('div');
+    finalResultDiv.classList.add('final-result-div');
+    playArea.appendChild(finalResultDiv);
 
 // creating divs inside score-board
 
