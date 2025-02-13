@@ -97,6 +97,21 @@ function imgButtonClicked(event){
     roundsDiv.textContent = `Round ${++roundNo}`;
 
     playArea.appendChild(playResultArea);
+
+     // if rounds reach 5
+
+     if(roundNo > 5){
+        endGame();
+    }
+}
+
+function endGame(){
+    log('Game Ends');
+
+    playArea.removeChild(roundsDiv);
+    playArea.removeChild(imgContainer);
+    roundNo = 1;
+
 }
 
 // Creating divs inside .main-content
