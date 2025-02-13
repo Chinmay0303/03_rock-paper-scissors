@@ -36,6 +36,8 @@ function resetButtonClicked(){
 
     userScore.textContent = 0;
     compScore.textContent = 0;
+    roundNo = 1;
+    roundsDiv.textContent = `Round ${roundNo}`;
 
     resetButton.disabled = true;
     playButton.disabled = false;
@@ -92,6 +94,8 @@ function imgButtonClicked(event){
     userScore.textContent = uScore;
     compScore.textContent = cScore;
 
+    roundsDiv.textContent = `Round ${++roundNo}`;
+
     playArea.appendChild(playResultArea);
 }
 
@@ -99,16 +103,17 @@ function imgButtonClicked(event){
 const playArea = document.createElement('div');
 playArea.classList.add('play-area');
 
-    const optionsDiv = document.createElement('div');
+    const roundsDiv = document.createElement('div');
     const imgContainer = document.createElement('div');
 
-    playArea.appendChild(optionsDiv);
+    playArea.appendChild(roundsDiv);
     playArea.appendChild(imgContainer);
 
-    optionsDiv.classList.add('options-div');
+    roundsDiv.classList.add('rounds-div');
     imgContainer.classList.add('img-container');
 
-        optionsDiv.textContent = 'Choose One: ';
+        let roundNo = 1;
+        roundsDiv.textContent = `Round ${roundNo}`;
 
         // creating buttons to choose from
         const imgButtonRock = document.createElement('input');
