@@ -50,20 +50,37 @@ function playButtonClicked(){
 function imgButtonClicked(event){
     log(event.target.id);
     let imgSource = ['./imgs/rock.png','./imgs/paper.png','./imgs/scissors.png'];
+    
+    let userChoice;
 
     if(event.target.id === 'img-button-rock'){
-        userImg.setAttribute('src',imgSource[0]);
+        userChoice = 0;
     }
     else if(event.target.id === 'img-button-paper'){
-        userImg.setAttribute('src',imgSource[1]);
+        userChoice = 1;
     }
     else{
-        userImg.setAttribute('src',imgSource[2]);
+        userChoice = 2;
     }
 
-    let randomImg = Math.floor(Math.random()*3);
-    log(randomImg);
-    compImg.setAttribute('src',imgSource[randomImg]);
+    let compChoice = Math.floor(Math.random()*3);
+    log(compChoice);
+
+    userImg.setAttribute('src',imgSource[userChoice]);
+    compImg.setAttribute('src',imgSource[compChoice]);
+
+
+    if(userChoice === 0 && compChoice === 2
+        || userChoice === 1 && compChoice === 0
+        || userChoice === 2 && compChoice === 1){
+            resultDiv.textContent = 'User Wins';
+        }
+    else if(userChoice === compChoice){
+            resultDiv.textContent = 'Tied';
+    }
+    else{
+            resultDiv.textContent = 'Computer Wins';
+    }
 
     playArea.appendChild(playResultArea);
 }
