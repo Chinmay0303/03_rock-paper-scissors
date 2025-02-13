@@ -32,6 +32,7 @@ function resetButtonClicked(){
     log('RESET');
     mainContent.removeChild(playArea);
     mainContent.removeChild(scoreBoard);
+    playArea.removeChild(playResultArea);
 
     resetButton.disabled = true;
     playButton.disabled = false;
@@ -48,6 +49,19 @@ function playButtonClicked(){
 
 function imgButtonClicked(event){
     log(event.target.id);
+    let imgSource = ['./imgs/rock.png','./imgs/paper.png','./imgs/scissors.png'];
+
+    if(event.target.id === 'img-button-rock'){
+        userImg.setAttribute('src',imgSource[0]);
+    }
+    else if(event.target.id === 'img-button-paper'){
+        userImg.setAttribute('src',imgSource[1]);
+    }
+    else{
+        userImg.setAttribute('src',imgSource[2]);
+    }
+
+    playArea.appendChild(playResultArea);
 }
 
 // Creating divs inside .main-content
@@ -94,7 +108,6 @@ playArea.classList.add('play-area');
     playResultArea.classList.add('play-result-area');
 
     // when user clicks an image button
-    // playArea.appendChild(playResultArea);
 
         const userPlayedArea = document.createElement('div');
         userPlayedArea.classList.add('user-played-area');
