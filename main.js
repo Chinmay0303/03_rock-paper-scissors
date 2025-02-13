@@ -63,7 +63,7 @@ function playButtonClicked(){
 
 function imgButtonClicked(event){
     log(event.target.id);
-    let imgSource = ['./imgs/rock.png','./imgs/paper.png','./imgs/scissors.png'];
+    let imgSource = ['./imgs/rock.png','./imgs/paper.png','./imgs/scissors_1.png'];
     
     let userChoice;
 
@@ -168,7 +168,7 @@ playArea.classList.add('play-area');
 
         const imgButtonScissors = document.createElement('input');
         imgButtonScissors.type = 'image';
-        imgButtonScissors.src = './imgs/scissors.png';
+        imgButtonScissors.src = './imgs/scissors_1.png';
         imgButtonScissors.classList.add('img-button');
         imgButtonScissors.setAttribute('id','img-button-scissors');
 
