@@ -34,6 +34,9 @@ function resetButtonClicked(){
     mainContent.removeChild(scoreBoard);
     playArea.removeChild(playResultArea);
 
+    userScore.textContent = 0;
+    compScore.textContent = 0;
+
     resetButton.disabled = true;
     playButton.disabled = false;
 }
@@ -69,18 +72,25 @@ function imgButtonClicked(event){
     userImg.setAttribute('src',imgSource[userChoice]);
     compImg.setAttribute('src',imgSource[compChoice]);
 
+    let uScore = + userScore.textContent;
+    let cScore = + compScore.textContent;
 
     if(userChoice === 0 && compChoice === 2
         || userChoice === 1 && compChoice === 0
         || userChoice === 2 && compChoice === 1){
             resultDiv.textContent = 'User Wins';
+            uScore++;
         }
     else if(userChoice === compChoice){
             resultDiv.textContent = 'Tied';
     }
     else{
             resultDiv.textContent = 'Computer Wins';
+            cScore++;
     }
+
+    userScore.textContent = uScore;
+    compScore.textContent = cScore;
 
     playArea.appendChild(playResultArea);
 }
