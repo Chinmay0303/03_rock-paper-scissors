@@ -7,6 +7,9 @@
 .body-container{
     height: 100vh;
     border: 2px solid black;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .head-container{
@@ -26,6 +29,8 @@
 }
 
 .main-container{
+    flex-grow: 1;
+    
     border: 2px solid blue;
 
     display: flex;
