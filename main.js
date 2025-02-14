@@ -201,7 +201,7 @@ playArea.classList.add('play-area');
                 userImg.classList.add('user-img');
                 userImg.setAttribute('width','60px');
                 userImg.setAttribute('height','60px');
-                userPlayedArea.appendChild(userImg);
+                userPlayedImageDiv.appendChild(userImg);
             
 
         const compPlayedArea = document.createElement('div');
@@ -221,7 +221,7 @@ playArea.classList.add('play-area');
                 compImg.classList.add('comp-img');
                 compImg.setAttribute('width','60px');
                 compImg.setAttribute('height','60px');
-                compPlayedArea.appendChild(compImg);
+                compPlayedImageDiv.appendChild(compImg);
 
         const resultDiv = document.createElement('div');
         resultDiv.classList.add('resut-div');
