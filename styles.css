@@ -53,6 +53,12 @@
 
 .img-container{
     border: 2px solid green;
+    width: 50%;
+
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .play-result-area{
