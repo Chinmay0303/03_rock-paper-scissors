@@ -184,9 +184,13 @@ playArea.classList.add('play-area');
 
     // when user clicks an image button
 
+    const playedAreaDiv = document.createElement('div');
+    playedAreaDiv.classList.add('played-area-div');
+    playResultArea.appendChild(playedAreaDiv);
+
         const userPlayedArea = document.createElement('div');
         userPlayedArea.classList.add('user-played-area');
-        playResultArea.appendChild(userPlayedArea);
+        playedAreaDiv.appendChild(userPlayedArea);
 
             const userPlayedText = document.createElement('div');
             userPlayedText.classList.add('user-played-text');
@@ -206,7 +210,7 @@ playArea.classList.add('play-area');
 
         const compPlayedArea = document.createElement('div');
         compPlayedArea.classList.add('comp-played-area');
-        playResultArea.appendChild(compPlayedArea);
+        playedAreaDiv.appendChild(compPlayedArea);
             
             const compPlayedText = document.createElement('div');
             compPlayedText.classList.add('comp-played-text');
