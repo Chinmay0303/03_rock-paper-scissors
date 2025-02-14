@@ -77,11 +77,22 @@
 
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+
+    width: 100%;
 }
 
 .user-played-area{
     border: 2px solid gold;
+}
+
+.vs-div{
+    border: 2px solid red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .comp-played-area{
