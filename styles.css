@@ -63,6 +63,21 @@
 
 .play-result-area{
     border: 2px solid blue;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.played-area-div{
+    border: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .user-played-area{
