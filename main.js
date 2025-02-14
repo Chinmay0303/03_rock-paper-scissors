@@ -194,7 +194,7 @@ playArea.classList.add('play-area');
 
             const userPlayedText = document.createElement('div');
             userPlayedText.classList.add('user-played-text');
-            userPlayedText.textContent = 'User Played: ';
+            userPlayedText.textContent = 'User: ';
             userPlayedArea.appendChild(userPlayedText);
             
             const userPlayedImageDiv = document.createElement('div');
@@ -206,6 +206,11 @@ playArea.classList.add('play-area');
                 userImg.setAttribute('width','60px');
                 userImg.setAttribute('height','60px');
                 userPlayedImageDiv.appendChild(userImg);
+        
+        const vsDiv = document.createElement('div');
+        vsDiv.classList.add('vs-div');
+        vsDiv.textContent = 'vs';
+        playedAreaDiv.appendChild(vsDiv);
             
 
         const compPlayedArea = document.createElement('div');
@@ -214,7 +219,7 @@ playArea.classList.add('play-area');
             
             const compPlayedText = document.createElement('div');
             compPlayedText.classList.add('comp-played-text');
-            compPlayedText.textContent = 'Computer Played: ';
+            compPlayedText.textContent = 'Computer: ';
             compPlayedArea.appendChild(compPlayedText);
             
             const compPlayedImageDiv = document.createElement('div');
