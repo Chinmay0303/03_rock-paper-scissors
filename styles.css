@@ -122,6 +122,26 @@
 }
 .control-section{
     border: 2px solid seagreen;
+
+    background-color:  black;
+    min-height: 4em;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.control-section .button{
+    height: 2em;
+
+    border-radius: 4px;
+    border: none;
+    margin-left: 16px;
+
+    padding: 8px 16px;
+
+    font-size: 20px;
 }
 
 .img-button{
