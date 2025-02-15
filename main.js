@@ -261,7 +261,7 @@ scoreBoard.classList.add('score-board');
 
             const userTitle = document.createElement('div');
             userTitle.classList.add('title');
-            userTitle.textContent = 'User: ';
+            userTitle.textContent = 'User';
             userScoreDiv.appendChild(userTitle);
 
             const userScore = document.createElement('div');
@@ -276,7 +276,7 @@ scoreBoard.classList.add('score-board');
 
             const compTitle = document.createElement('div');
             compTitle.classList.add('title');
-            compTitle.textContent = 'Computer: ';
+            compTitle.textContent = 'Computer';
             compScoreDiv.appendChild(compTitle);
 
             const compScore = document.createElement('div');
