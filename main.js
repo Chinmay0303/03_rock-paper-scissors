@@ -233,7 +233,7 @@ playArea.classList.add('play-area');
                 compPlayedImageDiv.appendChild(compImg);
 
         const resultDiv = document.createElement('div');
-        resultDiv.classList.add('resut-div');
+        resultDiv.classList.add('result-div');
         playResultArea.appendChild(resultDiv);
 
     // final result div
