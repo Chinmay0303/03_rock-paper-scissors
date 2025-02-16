@@ -106,7 +106,7 @@ function imgButtonClicked(event){
 
     roundsDiv.textContent = `Round ${++roundNo}`;
 
-    playArea.appendChild(playResultArea);
+    imgResultContainer.appendChild(playResultArea);
 
      // if rounds reach 5
 

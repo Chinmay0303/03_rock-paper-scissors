@@ -74,6 +74,16 @@
     padding: 8px 16px 8px 16px;
 }
 
+.img-result-container{
+    border: 2px solid hotpink;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    flex-wrap: wrap;
+}
+
 .img-container{
     border: 2px solid green;
 
