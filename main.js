@@ -33,7 +33,7 @@ function resetButtonClicked(){
     log('RESET');
 
     mainContainer.removeChild(mainContent);
-    playArea.appendChild(playResultArea);
+    imgResultContainer.appendChild(playResultArea);
     playArea.appendChild(finalResultDiv);
 
     resetButton.disabled = true;
@@ -46,9 +46,10 @@ function playButtonClicked(){
     mainContent.appendChild(scoreBoard);
 
     mainContainer.appendChild(mainContent);
-    playArea.removeChild(playResultArea);
+    imgResultContainer.removeChild(playResultArea);
     playArea.appendChild(roundsDiv);
-    playArea.appendChild(imgContainer);
+    playArea.appendChild(imgResultContainer);
+    imgResultContainer.appendChild(imgContainer);
     playArea.removeChild(finalResultDiv);
 
     userScore.textContent = 0;
@@ -118,7 +119,7 @@ function endGame(uScore,cScore){
     log('Game Ends');
 
     playArea.removeChild(roundsDiv);
-    playArea.removeChild(imgContainer);
+    imgResultContainer.removeChild(imgContainer);
     roundNo = 1;
 
     playButton.disabled = false;
@@ -134,6 +135,7 @@ function endGame(uScore,cScore){
         finalResultDiv.textContent = 'Final Result: Computer Wins';
     }
 
+    imgResultContainer.appendChild(playResultArea);
     playArea.appendChild(finalResultDiv);
 }
 
@@ -142,45 +144,48 @@ const playArea = document.createElement('div');
 playArea.classList.add('play-area');
 
     const roundsDiv = document.createElement('div');
-    const imgContainer = document.createElement('div');
+    const imgResultContainer = document.createElement('div');
+    imgResultContainer.classList.add('img-result-container');
 
     playArea.appendChild(roundsDiv);
-    playArea.appendChild(imgContainer);
+    playArea.appendChild(imgResultContainer);
 
     roundsDiv.classList.add('rounds-div');
-    imgContainer.classList.add('img-container');
 
-        let roundNo = 1;
-        roundsDiv.textContent = `Round ${roundNo}`;
+    const imgContainer = document.createElement('div');
+    imgResultContainer.appendChild(imgContainer);
+        imgContainer.classList.add('img-container');
 
-        // creating buttons to choose from
-        const imgButtonRock = document.createElement('input');
-        imgButtonRock.type = 'image';
-        imgButtonRock.src = './imgs/rock.png';
-        imgButtonRock.classList.add('img-button');
-        imgButtonRock.setAttribute('id','img-button-rock');
+            let roundNo = 1;
+            roundsDiv.textContent = `Round ${roundNo}`;
 
-        const imgButtonPaper = document.createElement('input');
-        imgButtonPaper.type = 'image';
-        imgButtonPaper.src = './imgs/paper.png';
-        imgButtonPaper.classList.add('img-button');
-        imgButtonPaper.setAttribute('id','img-button-paper');
+            // creating buttons to choose from
+            const imgButtonRock = document.createElement('input');
+            imgButtonRock.type = 'image';
+            imgButtonRock.src = './imgs/rock.png';
+            imgButtonRock.classList.add('img-button');
+            imgButtonRock.setAttribute('id','img-button-rock');
 
-        const imgButtonScissors = document.createElement('input');
-        imgButtonScissors.type = 'image';
-        imgButtonScissors.src = './imgs/scissors_1.png';
-        imgButtonScissors.classList.add('img-button');
-        imgButtonScissors.setAttribute('id','img-button-scissors');
+            const imgButtonPaper = document.createElement('input');
+            imgButtonPaper.type = 'image';
+            imgButtonPaper.src = './imgs/paper.png';
+            imgButtonPaper.classList.add('img-button');
+            imgButtonPaper.setAttribute('id','img-button-paper');
 
-        imgContainer.appendChild(imgButtonRock);
-        imgContainer.appendChild(imgButtonPaper);
-        imgContainer.appendChild(imgButtonScissors);
+            const imgButtonScissors = document.createElement('input');
+            imgButtonScissors.type = 'image';
+            imgButtonScissors.src = './imgs/scissors_1.png';
+            imgButtonScissors.classList.add('img-button');
+            imgButtonScissors.setAttribute('id','img-button-scissors');
 
-    // creating .play-result-area inside .play-area
+            imgContainer.appendChild(imgButtonRock);
+            imgContainer.appendChild(imgButtonPaper);
+            imgContainer.appendChild(imgButtonScissors);
+
 
     const playResultArea = document.createElement('div');
     playResultArea.classList.add('play-result-area');
-    playArea.appendChild(playResultArea);
+    imgResultContainer.appendChild(playResultArea);
 
     // when user clicks an image button
 
