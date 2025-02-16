@@ -44,10 +44,10 @@
 
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    /* align-items: flex-start; */
 
     flex-wrap: wrap;
-    align-content: flex-start;
+    /* align-content: flex-start; */
 }
 .play-area{
     border: 2px solid orchid;
