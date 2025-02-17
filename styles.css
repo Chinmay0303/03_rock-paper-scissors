@@ -138,6 +138,12 @@
     
     padding: 8px 16px 8px 16px;
 }
+.win{
+    background-color: rgb(50, 255, 81);
+}
+.lose{
+    background-color: rgb(255, 50, 50);
+}
 
 .final-result-div{
     border: 2px solid #0D0D1B;

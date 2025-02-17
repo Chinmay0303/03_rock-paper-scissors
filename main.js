@@ -92,13 +92,16 @@ function imgButtonClicked(event){
         || userChoice === 1 && compChoice === 0
         || userChoice === 2 && compChoice === 1){
             resultDiv.textContent = `Round ${roundNo} Result: User Wins`;
+            resultDiv.setAttribute('class','result-div win');
             uScore++;
         }
     else if(userChoice === compChoice){
             resultDiv.textContent = `Round ${roundNo} Result: Tie`;
+            resultDiv.setAttribute('class','result-div');
     }
     else{
             resultDiv.textContent = `Round ${roundNo} Result: Computer Wins`;
+            resultDiv.setAttribute('class','result-div lose');
             cScore++;
     }
 
@@ -128,12 +131,15 @@ function endGame(uScore,cScore){
 
     if(uScore > cScore){
         finalResultDiv.textContent = 'Final Result: User Wins';
+        finalResultDiv.setAttribute('class','final-result-div win');
     }
     else if(uScore === cScore){
         finalResultDiv.textContent = 'Final Result: Tie';
+        finalResultDiv.setAttribute('class','final-result-div');
     }
     else{
         finalResultDiv.textContent = 'Final Result: Computer Wins';
+        finalResultDiv.setAttribute('class','final-result-div lose');
     }
 
     imgResultContainer.appendChild(playResultArea);
