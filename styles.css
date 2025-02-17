@@ -6,63 +6,55 @@
 
 .body-container{
     min-height: 100vh;
-    border: 2px solid black;
 
     display: flex;
     flex-direction: column;
 }
 
 .head-container{
-    border: 2px solid green;
     text-align: center;
     font-size: 24px;
-    background-color: bisque;
-    min-height: 3em;
-
+    background-color: #0D0D1B;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .heading{
-    border: 2px solid red;
+    color: #ffffff;
+    
+    padding: 8px 16px 8px 16px;
 }
 
 .main-container{
     flex-grow: 1;
 
-    border: 2px solid blue;
-
     display: flex;
     flex-direction: column;
+
+    background-color: #E3E3F2;
 }
 
 .main-content{
     flex-grow: 1;
 
-    border: 2px solid gold;
-
     display: flex;
     justify-content: space-around;
-    /* align-items: flex-start; */
-
     flex-wrap: wrap;
-    /* align-content: flex-start; */
 }
 .play-area{
-    border: 2px solid orchid;
-
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     gap: 16px;
     padding: 16px;
 }
 
 .rounds-div{
-    border: 2px solid red;
+    border-radius: 8px;
+    background-color: #1B1B37;
+    color: #ffffff;
 
     display: flex;
     justify-content: center;
@@ -75,26 +67,26 @@
 }
 
 .img-result-container{
-    border: 2px solid hotpink;
+    color: #080E20;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 64px;
+    gap: 32px;
     flex-wrap: wrap;
 }
 
 .img-container{
-    border: 2px solid green;
-
     display: flex;
     justify-content: center ;
     align-items: center;
     flex-wrap: wrap;
+    gap: 8px;
 }
 
 .play-result-area{
-    border: 2px solid blue;
+    border: 2px solid #0D0D1B;
+    color: #0D0D1B;
 
     display: flex;
     flex-direction: column;
@@ -105,8 +97,6 @@
 }
 
 .played-area-div{
-    border: 2px solid black;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,8 +107,6 @@
 
 .user-played-area,
 .comp-played-area{
-    border: 2px solid gold;
-
     font-size: 24px;
     font-weight: 600;
     
@@ -133,8 +121,6 @@
 }
 
 .vs-div{
-    border: 2px solid red;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,27 +132,26 @@
 }
 
 .result-div{
-    border: 2px solid green;
+    border: 2px solid #0D0D1B;
     font-size: 24px;
-    /* font-weight: 600; */
     
     padding: 8px 16px 8px 16px;
 }
 
 .final-result-div{
-    border: 2px solid brown;
+    border: 2px solid #0D0D1B;
+    color: #0D0D1B;
 
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 600;
     
+    margin: 16px;
     padding: 8px 16px 8px 16px;
 }
 
 .score-board{
-    border: 2px solid palevioletred;
-
-    background-color: black;
-    color: whitesmoke;
+    background-color: #141429;
+    color: #ffffff;
 
     min-width: 20%;
 
@@ -202,19 +187,18 @@
 .score-div .user-score-div,
 .score-div .comp-score-div
 {
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 .control-section{
-    border: 2px solid seagreen;
+    border-top: 1px solid #ffffff;
 
-    background-color:  black;
+    background-color:  #141429;
     min-height: 4em;
 
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 8px;
@@ -229,19 +213,22 @@
     padding: 8px 16px;
 
     font-size: 20px;
+    font-weight: 700;
+
+    color: #141429;
 }
 
 .img-button{
     width: 120px;
     height: 100px;
 
-    border: 1px solid black;
+    border: 2px solid #0D0D1B;
+    padding: 8px;
 }
 
 .footer{
-    border: 2px solid gold;
-    background-color: rgb(7, 12, 39);
-    height: 2.5em;
+    background-color: #0D0D1B;
+    padding: 8px 16px;
 
     display: flex;
     justify-content: center;
@@ -250,5 +237,5 @@
 
 .footer-text a{
     text-decoration:  none;
-    color: whitesmoke;
+    color: #ffffff;
 }
