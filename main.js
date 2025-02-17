@@ -18,15 +18,16 @@ function clickFunction(event){
     let buttonClicked = event.target.classList.value;
     // gives class of the clicked button
 
-    if(buttonClicked === 'reset button'){
+    if(buttonClicked === 'reset button over'){
         resetButtonClicked();
     }
-    else if(buttonClicked === 'play button'){
+    else if(buttonClicked === 'play button over'){
         playButtonClicked();
     }
-    else if(buttonClicked === 'img-button'){
+    else if(buttonClicked === 'img-button over'){
         imgButtonClicked(event);
     }
+    event.target.classList.remove('over');
 }
 
 function resetButtonClicked(){
@@ -288,3 +289,28 @@ scoreBoard.classList.add('score-board');
             compScore.classList.add('score');
             compScore.textContent = 0;
             compScoreDiv.appendChild(compScore);
+
+
+document.addEventListener('mouseover',mouseOverEvent);
+document.addEventListener('mouseout',mouseOutEvent);
+
+function mouseOverEvent(event){
+    if(event.target.tagName === 'BUTTON'){
+        if(event.target.disabled === false)
+            event.target.classList.add('over');
+    }
+    else if(event.target.tagName === 'INPUT'){
+        event.target.classList.add('over');
+    }
+}
+
+function mouseOutEvent(event){
+    if(event.target.tagName === 'BUTTON'){
+        if(event.target.disabled === false)
+            event.target.classList.remove('over');
+    }
+    else if(event.target.tagName === 'INPUT'){
+        event.target.classList.remove('over');
+    }
+}
+

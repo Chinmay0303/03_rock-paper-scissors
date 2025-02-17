@@ -42,6 +42,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 .play-area{
     flex-grow: 1;
     display: flex;
@@ -218,9 +219,31 @@
     color: #141429;
 }
 
+.control-section .button.over{
+    height: 2em;
+
+    border-radius: 4px;
+    border: none;
+    margin-left: 16px;
+
+    padding: 8px 16px;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    color: #141429;
+}
+
 .img-button{
     width: 120px;
     height: 100px;
+
+    border: 2px solid #0D0D1B;
+    padding: 8px;
+}
+.img-button.over{
+    width: 125px;
+    height: 105px;
 
     border: 2px solid #0D0D1B;
     padding: 8px;
